@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gururaj Kachare | Portfolio</title>
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --accent: #004a99;
+            --linkedin-blue: #0077b5;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #1a202c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-main); 
+            background: radial-gradient(circle at top right, #001f3f, #000814);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        header, section {
+            max-width: 900px;
+            margin: 25px auto;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        header { text-align: center; }
+
+        .profile-img {
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin-bottom: 20px;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .profile-img:hover { transform: scale(1.1); box-shadow: 0 0 25px var(--primary); }
+
+        h1 { color: var(--accent); font-size: 2.2rem; }
+        h2 { 
+            color: var(--accent); 
+            margin-bottom: 20px; 
+            border-left: 5px solid var(--primary); 
+            padding-left: 15px;
+            font-size: 1.6rem;
+        }
+
+        .achievement-list li {
+            background: #f1f5f9;
+            margin-bottom: 12px;
+            padding: 15px;
+            border-radius: 12px;
+            list-style: none;
+            border-left: 3px solid var(--accent);
+        }
+
+        .badge-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .badge {
+            background: var(--accent);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s ease;
+        }
+
+        .card:hover { 
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 212, 255, 0.15);
+            border-color: var(--primary);
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn-email { background-color: var(--accent); }
+        .btn-github { background-color: #333; }
+        .btn-linkedin { background-color: var(--linkedin-blue); }
+
+        .contact-btn:hover { 
+            transform: translateY(-3px);
+            filter: brightness(1.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        footer { text-align: center; padding: 40px; color: rgba(255,255,255,0.6); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Gururaj_photo.png" alt="Gururaj Kachare" class="profile-img">
+        <h1>Gururaj Kachare</h1>
+        <p><strong>AIML Student @ MITAOE</strong></p>
+    </header>
+
+    <!-- NEW ABOUT ME SECTION -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a First Year AIML student with a passion for technology and a strong foundation in physics and digital electronics.</p>
+    </section>
+
+    <section id="achievements">
+        <h2>Experience & Achievements</h2>
+        <ul class="achievement-list">
+            <li>⚓ <strong>Sea Cadet Corps:</strong> Completed 8 years</li>
+            <li>🏃 <strong>10km Marathon:</strong> Completed successfully, proving endurance and grit.</li>
+            <li>📜 <strong>Certifications:</strong> Cisco & NASSCOM Certified professional.</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="badge-container">
+            <span class="badge">Python</span>
+            <span class="badge">C Language</span>
+            <span class="badge">Machine Learning</span>
+            <span class="badge">Digital Electronics</span>
+            <span class="badge">HTML & CSS</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Key Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>🔍 Lost & Found Hub</h3>
+                <p>A smart community portal for reporting and tracking lost belongings.</p>
+            </div>
+            <div class="card">
+                <h3>🤖 Story Maker Chatbot</h3>
+                <p>AI bot that uses NLP to create branching, personalized stories for users.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2>Let's Connect</h2>
+        <p style="margin-bottom: 20px;">Open to discussions on AIML, Engineering, and Defense Tech.</p>
+        <div class="contact-container">
+            <a href="mailto:gururajkachare123@gmail.com" class="contact-btn btn-email">📧 Email</a>
+            <a href="https://github.com/GururajKachare" target="_blank" class="contact-btn btn-github">💻 GitHub</a>
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" class="contact-btn btn-linkedin">🔗 LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gururaj Kachare | Built with Passion & Precision</p>
+    </footer>
+
+</body>
+</html>
